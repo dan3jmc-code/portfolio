@@ -1,46 +1,54 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #f3f4f6;
+    color: #333;
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
 }
-h1 {
+
+.title {
     text-align: center;
+    font-size: 2em;
     color: #1a202c;
     margin-bottom: 30px;
 }
-.card {
+
+.module-list .card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     overflow: hidden;
 }
+
 .card-header {
     background-color: #f8fafc;
     padding: 15px 20px;
     border-bottom: 1px solid #e2e8f0;
 }
+
 .card-title {
-    margin: 0;
     font-size: 1.25rem;
     color: #2d3748;
+    margin: 0;
 }
+
 .card-content {
     padding: 20px;
 }
+
 .benefits-list {
     list-style-type: disc;
     padding-left: 20px;
     margin-bottom: 20px;
 }
+
 .checkout-button {
     display: block;
     width: 100%;
@@ -55,6 +63,7 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .checkout-button:hover {
     background-color: #2c5282;
 }
