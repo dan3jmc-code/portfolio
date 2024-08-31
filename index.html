@@ -1,66 +1,73 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
-const courseModules = [
-  {
-    id: 1,
-    title: "Forex Fundamentals",
-    description: "Learn the basics of forex markets and currency pairs."
-  },
-  {
-    id: 2,
-    title: "Technical Analysis",
-    description: "Master chart reading and technical indicators."
-  },
-  {
-    id: 3,
-    title: "Risk Management",
-    description: "Develop strategies to protect your capital."
-  },
-  {
-    id: 4,
-    title: "Advanced Trading Strategies",
-    description: "Explore complex trading techniques and automation."
-  }
-];
-
-const ForexCourseCheckout = () => {
-  const handleCheckout = () => {
-    // Replace 'your-whop-product-id' with your actual Whop product ID
-    window.location.href = 'https://whop.com/checkout/your-whop-product-id';
-  };
-
-  return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-extrabold text-center text-gray-900 mb-8">
-          Forex Trading Mastery Course
-        </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Trading Mastery Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Forex Trading Mastery Course</h1>
         
-        <div className="space-y-6 mb-8">
-          {courseModules.map((module) => (
-            <Card key={module.id}>
-              <CardHeader>
-                <CardTitle>{module.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{module.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div class="module-list">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Forex Fundamentals</h2>
+                </div>
+                <div class="card-content">
+                    <p>Learn the basics of forex markets and currency pairs.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Technical Analysis</h2>
+                </div>
+                <div class="card-content">
+                    <p>Master chart reading and technical indicators.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Risk Management</h2>
+                </div>
+                <div class="card-content">
+                    <p>Develop strategies to protect your capital.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Advanced Trading Strategies</h2>
+                </div>
+                <div class="card-content">
+                    <p>Explore complex trading techniques and automation.</p>
+                </div>
+            </div>
         </div>
         
-        <Card>
-          <CardHeader>
-            <CardTitle>Course Price: $299</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="list-disc list-inside mb-4">
-              <li>Lifetime access to all modules</li>
-              <li>Expert support and guidance</li>
-              <li>Certificate upon completion</li>
-            </ul>
-            <Button 
-              onClick={handleCheckout}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded"
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Course Price: $299</h2>
+            </div>
+            <div class="card-content">
+                <ul class="benefits-list">
+                    <li>Lifetime access to all modules</li>
+                    <li>Expert support and guidance</li>
+                    <li>Certificate upon completion</li>
+                </ul>
+                <button class="checkout-button" onclick="handleCheckout()">Checkout with Whop</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleCheckout() {
+            // Replace 'your-whop-product-id' with your actual Whop product ID
+            window.location.href = 'https://whop.com/checkout/your-whop-product-id';
+        }
+    </script>
+</body>
+</html>
