@@ -1,91 +1,59 @@
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    overflow: hidden; /* Hide scrollbars */
-    user-select: none;
-    user-zoom: none;
-    font-family: Arial, Helvetica, sans-serif; /* Font family for body text */
-    background-color: #000; /* Black background */
-    opacity: 0; /* Start with full opacity at 0 for fade-in effect */
-    transition: opacity 7s ease-in; /* Smooth fade-in for the entire webpage, increased duration */
+    padding: 0;
 }
 
-* {
-    cursor: url('https://tobiasahlin.com/static/cursors/default.png'), auto;
-}
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    z-index: 1; /* Ensure it's behind social and credit sections */
-}
-
-#socials-container {
-    display: flex;
-    flex-direction: column; /* Stack text and buttons vertically */
-    align-items: center; /* Center horizontally */
-    position: fixed; /* Stay in place */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset for centering */
-    z-index: 5;
-    font-family: Arial, Helvetica, sans-serif; /* Font family for social container text */
-}
-
-#socials-text {
-    color: #fff;
-    font-size: 1.2em; /* Adjusted size for text */
-    margin-bottom: 0.5em; /* Space between text and icons */
-    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.7); /* Lighter shadow effect */
-}
-
-#socials {
-    display: flex;
-    justify-content: center; /* Center icons horizontally */
-    align-items: center; /* Center icons vertically */
-    margin: 0;
+.container {
+    width: 80%;
+    margin: auto;
     overflow: hidden;
 }
 
-.glow-icon {
-    width: 3em; /* Adjusted width for icons */
-    height: 3em; /* Adjusted height for icons */
-    margin: 0 0.5em; /* Adjusted margin to space out icons */
-    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions for glow and animation */
-    filter: none; /* Default filter (no glow) */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
 }
 
-.glow-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
-}
-
-#discord:hover {
-    filter: url(#glow-discord); /* Apply specific glow filter for Discord */
-}
-
-#telegram:hover {
-    filter: url(#glow-telegram); /* Apply specific glow filter for Telegram */
-}
-
-#x:hover {
-    filter: url(#glow-x); /* Apply specific glow filter for Twitter */
-}
-
-#credit {
-    position: absolute;
-    color: white;
-    opacity: 0.25;
-    z-index: 4;
+header h1 {
     text-align: center;
-    min-width: 100%;
-    bottom: 0;
-    padding-bottom: 1em;
+    margin: 0;
+    font-size: 36px;
 }
 
-#creditText {
-    margin: 0;
+#modules, #faq {
+    margin: 20px 0;
+}
+
+#modules ul, #faq ul {
+    list-style-type: none;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif; /* Font family for credit text */
+}
+
+#modules li, #faq li {
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: #e8491d 5px solid;
+}
+
+#checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #e8491d;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+#checkout-button:hover {
+    background: #cf3e1a;
 }
