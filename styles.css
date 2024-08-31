@@ -1,59 +1,60 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f3f4f6;
     margin: 0;
     padding: 0;
 }
-
 .container {
-    width: 80%;
-    margin: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #1a202c;
+    margin-bottom: 30px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     overflow: hidden;
 }
-
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+.card-header {
+    background-color: #f8fafc;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
 }
-
-header h1 {
-    text-align: center;
+.card-title {
     margin: 0;
-    font-size: 36px;
+    font-size: 1.25rem;
+    color: #2d3748;
 }
-
-#modules, #faq {
-    margin: 20px 0;
+.card-content {
+    padding: 20px;
 }
-
-#modules ul, #faq ul {
-    list-style-type: none;
-    padding: 0;
+.benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
-
-#modules li, #faq li {
-    background: #ffffff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-left: #e8491d 5px solid;
-}
-
-#checkout-button {
+.checkout-button {
     display: block;
     width: 100%;
-    padding: 10px;
-    background: #e8491d;
-    color: #ffffff;
+    padding: 12px;
+    background-color: #3182ce;
+    color: #fff;
     text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
     border: none;
     cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
-
-#checkout-button:hover {
-    background: #cf3e1a;
+.checkout-button:hover {
+    background-color: #2c5282;
 }
