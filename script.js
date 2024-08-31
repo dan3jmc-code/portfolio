@@ -1,16 +1,49 @@
-// Replace with your Stripe public key
-const stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); 
+const courseModules = [
+    {
+        id: 1,
+        title: "Forex Fundamentals",
+        description: "Learn the basics of forex markets and currency pairs."
+    },
+    {
+        id: 2,
+        title: "Technical Analysis",
+        description: "Master chart reading and technical indicators."
+    },
+    {
+        id: 3,
+        title: "Risk Management",
+        description: "Develop strategies to protect your capital."
+    },
+    {
+        id: 4,
+        title: "Advanced Trading Strategies",
+        description: "Explore complex trading techniques and automation."
+    }
+];
 
-document.getElementById('checkout-button').addEventListener('click', () => {
-    // Redirect to Stripe Checkout
-    stripe.redirectToCheckout({
-        lineItems: [{price: 'price_XXXXXXXXXXXXXXXX', quantity: 1}], // Replace with your price ID
-        mode: 'payment',
-        successUrl: 'https://yourdomain.com/success', // Replace with your success URL
-        cancelUrl: 'https://yourdomain.com/cancel',   // Replace with your cancel URL
-    }).then(function (result) {
-        if (result.error) {
-            alert(result.error.message);
-        }
+function renderCourseModules() {
+    const moduleContainer = document.getElementById('course-modules');
+    courseModules.forEach(module => {
+        const moduleCard = document.createElement('div');
+        moduleCard.className = 'card';
+        moduleCard.innerHTML = `
+            <div class="card-header">
+                <h2 class="card-title">${module.title}</h2>
+            </div>
+            <div class="card-content">
+                <p>${module.description}</p>
+            </div>
+        `;
+        moduleContainer.appendChild(moduleCard);
     });
+}
+
+function handleCheckout() {
+    // Replace 'your-whop-product-id' with your actual Whop product ID
+    window.location.href = 'https://whop.com/checkout/your-whop-product-id';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCourseModules();
+    document.getElementById('checkout-button').addEventListener('click', handleCheckout);
 });
