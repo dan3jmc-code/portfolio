@@ -1,23 +1,23 @@
 const courseModules = [
     {
         id: 1,
-        title: "Forex Fundamentals",
-        description: "Learn the basics of forex markets and currency pairs."
+        title: "What to expect",
+        description: "setting your expectations with this course"
     },
     {
         id: 2,
-        title: "Technical Analysis",
-        description: "Master chart reading and technical indicators."
+        title: "Learning the system",
+        description: "Master my exact system which has shown long term profitability."
     },
     {
         id: 3,
-        title: "Risk Management",
-        description: "Develop strategies to protect your capital."
+        title: "Risk Management & Capital preservation",
+        description: "Develop a plan to preserve capital knowing when to trade and when not to."
     },
     {
         id: 4,
-        title: "Advanced Trading Strategies",
-        description: "Explore complex trading techniques and automation."
+        title: "Putting it all together",
+        description: "Putting all the course together to show you what a day in the markets would look like"
     }
 ];
 
